@@ -8,12 +8,12 @@ function App() {
       <img src="pexels-bess-hamiti-36487.jpg" alt="" className="head-image" />
       <p className="header-name">Olumide Abai</p>
       <p className="description">
-        A student developer is an aspiring software engineer who is currently
-        pursuing academic studies while honing their coding skills. They are
-        passionate about learning new technologies, building projects, and
-        solving real-world problems through programming. Balancing coursework
-        with self-initiated coding challenges, they actively participate in
-        hackathons, coding competitions, and contribute to open-source projects.
+        A student developer, also an aspiring software engineer who is currently
+        pursuing academic studies while honing my coding skills. I am passionate
+        about learning new technologies, building projects, and solving
+        real-world problems through programming. Balancing coursework with
+        self-initiated coding challenges, I actively participate in hackathons,
+        coding competitions, and contribute to open-source projects.
       </p>
       <div className="skill-card-container">
         <SkillCard
