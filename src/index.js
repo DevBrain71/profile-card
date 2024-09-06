@@ -1,6 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+const skills = [
+  {
+    skill: "HTML + CSS",
+    level: "Advanced",
+    color: "#2662EA",
+  },
+  {
+    skill: "JavaScript",
+    level: "Advanced",
+    color: "#EFD81D",
+  },
+  {
+    skill: "Web Design",
+    level: "Intermediate",
+    color: "#C3DCAF",
+  },
+  {
+    skill: "Git and GitHub",
+    level: "Beginner",
+    color: "#E84F33",
+  },
+  {
+    skill: "React",
+    level: "Beginner",
+    color: "#60DAFB",
+  },
+  {
+    skill: "Python",
+    level: "Advanced",
+    color: "#FF3B00",
+  },
+];
 
 function App() {
   return (
@@ -16,45 +48,32 @@ function App() {
         coding competitions, and contribute to open-source projects.
       </p>
       <div className="skill-card-container">
-        <SkillCard
+        {skills.map((skill) => (
+          <SkillCard skillCard={skill} key={skill.skill} />
+        ))}
+
+        {/* <SkillCard
           skill="HTML + CSS 💪"
           class="skill-card"
-          bg={{ backgroundColor: "blue" }}
-        />
-        <SkillCard
-          skill="JavaScript 👍"
-          class="skill-card"
-          bg={{ backgroundColor: "yellow" }}
-        />
-        <SkillCard
-          skill="Web Design 💪"
-          class="skill-card"
-          bg={{ backgroundColor: "aquamarine" }}
-        />
-        <SkillCard
-          skill="Git and GitHub 👍"
-          class="skill-card"
-          bg={{ backgroundColor: "red" }}
-        />
-        <SkillCard
-          skill="react 👶"
-          class="skill-card"
-          bg={{ backgroundColor: "cadetblue" }}
-        />
-        <SkillCard
-          skill="Python 👍"
-          class="skill-card"
-          bg={{ backgroundColor: "orange" }}
-        />
+          color={{ backgroundColor: "blue" }}
+        /> */}
       </div>
     </div>
   );
 }
 
-function SkillCard(props) {
+function SkillCard({ skillCard }) {
+  const level =
+    skillCard.level === "Beginner"
+      ? "👶"
+      : null || skillCard.level === "Intermediate"
+      ? "👍"
+      : null || skillCard.level === "Advanced"
+      ? "💪"
+      : null;
   return (
-    <div style={props.bg} className={props.class}>
-      {props.skill}
+    <div style={{ backgroundColor: skillCard.color }} className="skill-card">
+      {skillCard.skill} <span>{level}</span>
     </div>
   );
 }
