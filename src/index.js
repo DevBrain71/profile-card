@@ -47,7 +47,7 @@ function App() {
         self-initiated coding challenges, I actively participate in hackathons,
         coding competitions, and contribute to open-source projects.
       </p>
-      <div className="skill-card-container">
+      <ul className="skill-card-container">
         {skills.map((skill) => (
           <SkillCard skillCard={skill} key={skill.skill} />
         ))}
@@ -57,7 +57,7 @@ function App() {
           class="skill-card"
           color={{ backgroundColor: "blue" }}
         /> */}
-      </div>
+      </ul>
     </div>
   );
 }
@@ -72,9 +72,9 @@ function SkillCard({ skillCard }) {
       ? "💪"
       : null;
   return (
-    <div style={{ backgroundColor: skillCard.color }} className="skill-card">
+    <li style={{ backgroundColor: skillCard.color }} className="skill-card">
       {skillCard.skill} <span>{level}</span>
-    </div>
+    </li>
   );
 }
 
